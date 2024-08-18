@@ -1,0 +1,9 @@
+﻿services:
+  dotnet-integration-api:
+    image: dotnet-integration-api
+    build:
+      context: .
+      dockerfile: dotnet-integration-api/Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
