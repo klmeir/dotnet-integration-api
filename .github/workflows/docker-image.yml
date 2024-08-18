@@ -26,6 +26,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./dotnet-integration-api/
+          context: .
+          dockerfile: ./dotnet-integration-api/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-integration-api:latest
